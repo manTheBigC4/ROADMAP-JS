@@ -27,6 +27,6 @@ function getComments(postTitle) {
 
 getUser(1)
     .then((user) => getPosts(user.id)) // return the promise, don't nest .then() inside
-    .then((posts) => getComments(posts)) // grab first post here
-    .then((comments) => console.log(`${comments}`));
-//.catch((err) => console.error(err));
+    .then((posts) => getComments(posts[0])) // grab first post here
+    .then((comments) => console.log(comments))
+    .catch((err) => console.error(err));
