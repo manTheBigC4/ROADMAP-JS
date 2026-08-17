@@ -1,6 +1,8 @@
 function test() {
     return new Promise((resolve, reject) => {
-        resolve("test");
+        setTimeout(() => {
+            resolve("test");
+        }, 2000);
     });
 }
 
@@ -16,18 +18,11 @@ function test3(v) {
     });
 }
 
-test()
-    .then((msg) => {
-        console.log("First promise consumed");
-        return test2("error");
-    })
-    .then((msg) => {
-        console.log("Second promise consumed");
-        return test3("test 3 error");
-    })
-    .then((msg) => {
-        console.log("Second promise consumed");
-    })
-    .catch((msg) => {
-        console.log(msg.message);
-    });
+async function main() {
+    console.log("Macarena Macarena");
+    const user = await test();
+
+    console.log(user);
+}
+
+main();
