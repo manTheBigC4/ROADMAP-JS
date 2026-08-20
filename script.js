@@ -1,1 +1,1 @@
-console.log(0.1 + 0.2 === 0.3);
+import haha, { User } from "./module.js";
