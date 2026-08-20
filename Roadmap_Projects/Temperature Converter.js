@@ -15,3 +15,4 @@ function formatTemperature(value, unit) {
 }
 
 console.log(formatTemperature(celsiusToFarenheit(20), "f"));
+console.log("hi");
