@@ -1,5 +1,10 @@
-import haha, { User } from "./module.js";
+function celsiusToFarenheit(celsius) {}
 
-console.log("Something funny");
+function farenheitToCelsius(farenheit) {}
 
-console.log("LOL");
+function formatTemperature(value, unit) {
+    if(typeof unit !== "string") {return;}
+
+    if (unit.toLowerCase() === )
+
+}
